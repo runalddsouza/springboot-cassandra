@@ -1,0 +1,11 @@
+spring:
+  profiles:
+    active: "test"
+  data:
+    cassandra:
+      keyspace-name: "products"
+      contact-points: "127.0.0.1"
+      port: 9142
+      username: "cassandra"
+      password: "cassandra"
+      datacenter: "datacenter1"
