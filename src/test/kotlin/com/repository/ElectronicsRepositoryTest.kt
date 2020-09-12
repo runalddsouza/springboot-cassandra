@@ -40,6 +40,11 @@ class ElectronicsRepositoryTest {
         assertEquals("name-1", data.get().name)
         assertEquals("code-1", data.get().code)
         assertEquals("type-1", data.get().type)
+        assertEquals("brand-1", data.get().brand)
+        assertEquals(1, data.get().links.size)
+        assertEquals("link-type-1", data.get().links.first().type)
+        assertEquals("link-1", data.get().links.first().link)
+        assertEquals(2, data.get().details.size)
     }
 
     @Test
@@ -50,6 +55,7 @@ class ElectronicsRepositoryTest {
         assertEquals("name-2", data.get().name)
         assertEquals("code-2", data.get().code)
         assertEquals("type-2", data.get().type)
+        assertEquals("brand-2", data.get().brand)
     }
 
     @Test
