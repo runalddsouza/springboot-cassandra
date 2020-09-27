@@ -10,4 +10,7 @@ import java.util.*
 interface ElectronicsRepository : CassandraRepository<Electronics, String> {
     @AllowFiltering
     fun findByCode(code: String): Optional<Electronics>
+
+    @AllowFiltering
+    override fun findById(id: String): Optional<Electronics>
 }
