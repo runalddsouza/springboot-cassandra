@@ -13,6 +13,7 @@ import org.springframework.test.context.ContextConfiguration
 import org.springframework.test.context.TestExecutionListeners
 import org.springframework.test.context.support.DependencyInjectionTestExecutionListener
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders
+import java.math.BigInteger
 
 
 @ComponentScan
@@ -46,6 +47,7 @@ class ElectronicsControllerTest : AbstractTest() {
         assertEquals("name-1", data.name)
         assertEquals("code-1", data.code)
         assertEquals("type-1", data.type)
+        assertEquals(BigInteger.valueOf(1601222808), data.lastUpdatedOn)
     }
 
     @Test
@@ -65,6 +67,7 @@ class ElectronicsControllerTest : AbstractTest() {
         assertEquals("name-2", data.name)
         assertEquals("code-2", data.code)
         assertEquals("type-2", data.type)
+        assertEquals(BigInteger.valueOf(1601222852), data.lastUpdatedOn)
     }
 
     @Test

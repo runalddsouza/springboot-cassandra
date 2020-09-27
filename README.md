@@ -1,4 +1,4 @@
-# SpringBoot with Cassandra
+# Spring Boot with Cassandra
 
 **Version**
 - Kotlin: 1.4.0

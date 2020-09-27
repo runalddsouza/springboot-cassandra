@@ -13,6 +13,7 @@ import org.springframework.test.context.ContextConfiguration
 import org.springframework.test.context.TestExecutionListeners
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner
 import org.springframework.test.context.support.DependencyInjectionTestExecutionListener
+import java.math.BigInteger
 
 
 @RunWith(SpringJUnit4ClassRunner::class)
@@ -45,6 +46,7 @@ class ElectronicsRepositoryTest {
         assertEquals("link-type-1", data.get().links.first().type)
         assertEquals("link-1", data.get().links.first().link)
         assertEquals(2, data.get().details.size)
+        assertEquals(BigInteger.valueOf(1601222808), data.get().lastUpdatedOn)
     }
 
     @Test
@@ -56,6 +58,7 @@ class ElectronicsRepositoryTest {
         assertEquals("code-2", data.get().code)
         assertEquals("type-2", data.get().type)
         assertEquals("brand-2", data.get().brand)
+        assertEquals(BigInteger.valueOf(1601222852), data.get().lastUpdatedOn)
     }
 
     @Test
